@@ -36,18 +36,31 @@ function max(arr) {
 function capitalize(str) {
   // TODO: Return string with first letter capitalized
   // "hello" -> "Hello"
+  return str[0].toUpperCase() + str.slice(1);
 }
 
 function reverse(str) {
   // TODO: Return the string reversed
   // "hello" -> "olleh"
   // Hint: str.split("").reverse().join("")
+  return str.split("").reverse().join("");
 }
 
 function countVowels(str) {
   // TODO: Return count of vowels (a, e, i, o, u)
   // "hello" -> 2
+  // User can enter str as an upperCase, for ensuring we str to lowercase
+  str = str.toLowerCase();
+  const vowels = ['a', 'e', 'i', 'o', 'u']; 
+  let count = 0;
+  for(let i = 0; i < str.length; i++){
+    if(vowels.includes(str[i])){
+      count++;
+    }
+  }
+  return count;
 }
+
 
 // ============ PART 3: OBJECT ============
 const student = {
@@ -76,6 +89,7 @@ console.log("\n=== Part 2: Strings ===");
 console.log("capitalize('hello'):", capitalize("hello"));
 console.log("reverse('hello'):", reverse("hello"));
 console.log("countVowels('hello'):", countVowels("hello"));
+console.log("CountVowels when string are in capital letters: ", countVowels("ARSLAN HELLO"));
 
 console.log("\n=== Part 3: Object ===");
 console.log("Student:", student.name);
