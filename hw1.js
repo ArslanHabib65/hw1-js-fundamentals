@@ -49,7 +49,7 @@ function reverse(str) {
 function countVowels(str) {
   // TODO: Return count of vowels (a, e, i, o, u)
   // "hello" -> 2
-  // User can enter str as an upperCase, for ensuring we str to lowercase
+  // User can enter str as an upperCase, for ensuring we convert str to lowercase
   str = str.toLowerCase();
   const vowels = ['a', 'e', 'i', 'o', 'u']; 
   let count = 0;
@@ -64,16 +64,22 @@ function countVowels(str) {
 
 // ============ PART 3: OBJECT ============
 const student = {
-  name: "Your Name",
+  name: "Arslan Habib",
   age: 20,
   grades: [85, 92, 78, 90, 88],
   
   getAverage: function() {
-    // TODO: Return average of this.grades
+    // TODO: Return average of this.grades 
+    // // keyword (this) represent the current object attribute.
+    return average(this.grades);
   },
   
   isHonorRoll: function() {
     // TODO: Return true if average > 85
+    if(this.getAverage() > 85){
+      return true;
+    }
+    return false;
   }
 };
 
