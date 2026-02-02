@@ -1,5 +1,5 @@
 // Homework 1: JavaScript Fundamentals
-// Name: YOUR NAME HERE
+// Name: Arslan Habib
 // Date: 2/1/2026
 
 // ============ PART 1: ARRAY FUNCTIONS ============
@@ -8,20 +8,28 @@ const numbers = [10, 5, 8, 12, 3, 7, 15, 2, 9, 6];
 function sum(arr) {
   // TODO: Return the sum of all numbers
   // Hint: Use a for loop or arr.reduce()
+  let sum = 0;
+  for(const i of arr){
+    sum += i;
+  }
+  return sum;
 }
 
 function average(arr) {
   // TODO: Return the average
   // Hint: Use your sum function!
+  return sum(arr) / arr.length;
 }
 
 function min(arr) {
   // TODO: Return the smallest number
   // Hint: Use Math.min(...arr)
+  return Math.min(...arr);
 }
 
 function max(arr) {
   // TODO: Return the largest number
+  return Math.max(...arr);
 }
 
 // ============ PART 2: STRING FUNCTIONS ============
